@@ -392,7 +392,7 @@
             class: "selectr-notice"
         });
 
-        this.el.setAttribute("aria-hidden", true);
+        if (this.mobileDevice || this.nativeDropdown) { this.el.setAttribute('aria-hidden', false); } else { this.el.setAttribute('aria-hidden', true); }
 
         if (this.disabled) {
             this.el.disabled = true;
